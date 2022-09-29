@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markas</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+  <script src="https://kit.fontawesome.com/94b351fdb3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../normalize.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="UI_style.css">
+</head>
+<body>
+  <header class="head noselect">
+    <div class="head_cont">
+      <div class="head_logo">
+       <a href="../index.html"><img src="../Mulitmedia/Logo/png/logo-no-background.png" alt="Logo" class="logo_img img-responsive"></a> 
+      </div>      
+      <button class="btn head_icon">
+        <i class="fa-solid fa-user"></i>
+      </button>
+      <div class="head_profile">
+        <div class="profile_item">
+          <i class="fa-regular fa-user"></i>
+          <a href="#">
+            <span>{profile}</span>
+          </a>
+        </div>
+        <div class="profile_item">
+         <a href="../index.html">
+           <span>Cerrar sesión</span>
+        </a> 
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main id="main" class="noselect">
+    <div class="main_content row">
+      <button class="main_aside_resp">
+        <span>Marcas <i class="fa-solid fa-plus"></i></span>
+      </button>
+      <button class="main_aside_resp">
+        <span>Filtrar <i class="fa-solid fa-filter"></i></span>
+      </button>
+      <aside class="main_aside col-xs-2">
+        <h3>Marcas</h3>
+        <ul>
+          <li><button class="btn btn-block btn-primary">Crear marca</button></li>
+          <li><button class="btn btn-block btn-mark">Crear etiqueta</button></li>
+          <li><button class="btn btn-block btn-mark">Modificar Etiqueta</button></li>
+        </ul>
+        <h3>Filtrar:</h3>
+        <ul>
+          <li><label for="fil_all">Todos:</label><input type="radio" name="filtro" id="fil_all" checked></li>
+          <li><label for="fil_eti">Favoritos</label><input type="radio" name="filtro" id="fil_eti"></li>
+          <li><label for="fil_color">Etiqueta:</label><input type="radio" name="filtro" id="fil_color"></li>
+        </ul>
+        <h3>Ordenar por:</h3>
+        <ul>
+          <li> <label for="fecha_asc">Fecha<i class="fa-solid fa-arrow-up"></i></label> <input type="radio" name="orden" id="fecha_asc" checked></li>
+          <li> <label for="fecha_desc">Fecha<i class="fa-solid fa-arrow-down"></i></label> <input type="radio" name="orden" id="fecha_desc"></li>
+          <li> <label for="alfabetico_asc">Alfabetico<i class="fa-solid fa-arrow-up"></i></label> <input type="radio" name="orden" id="alfabetico_asc"></li>
+          <li> <label for="alfabetico_desc">Alfabetico<i class="fa-solid fa-arrow-down"></i></label> <input type="radio" name="orden" id="alfabetico_desc"></li>
+        </ul>
+      </aside>
+      <section id="main_sec" class="col-xs-10">
+        <div class="sec_mark sec_mark_ch">
+          <div class="mark_icons">
+            <button class="mark_icons_fav">
+              <i class="fa-sharp fa-solid fa-heart heart_icon"></i>
+            </button>
+            <div class="mark_icons_edit">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </div>
+          <a href="https://ipn.com.ar/" target="_blank">
+            <div class="mark_content">
+            <h4>Infinite Loop</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque asperiores esse fugiat
+            </div>
+          </a>
+        </div>
+        <div class="sec_mark">
+          <div class="mark_icons">
+            <button class="mark_icons_fav">
+              <i class="fa-sharp fa-solid fa-heart heart_icon"></i>
+            </button>
+            <div class="mark_icons_edit">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </div>
+          <a href="https://ipn.com.ar/" target="_blank">
+            <div class="mark_content">
+            <h4>Infinite Loop</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque asperiores esse fugiat
+            </div>
+          </a>
+        </div>
+        <div class="sec_mark">
+          <div class="mark_icons">
+            <button class="mark_icons_fav">
+              <i class="fa-sharp fa-solid fa-heart heart_icon"></i>
+            </button>
+            <div class="mark_icons_edit">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </div>
+          <a href="https://ipn.com.ar/" target="_blank">
+            <div class="mark_content">
+            <h4>Infinite Loop</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque asperiores esse fugiat
+            </div>
+          </a>
+        </div>
+        <div class="sec_mark">
+          <div class="mark_icons">
+            <button class="mark_icons_fav">
+              <i class="fa-sharp fa-solid fa-heart heart_icon"></i>
+            </button>
+            <div class="mark_icons_edit">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </div>
+          <a href="https://ipn.com.ar/" target="_blank">
+            <div class="mark_content">
+            <h4>Infinite Loop</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque asperiores esse fugiat
+            </div>
+          </a>
+        </div>
+        <div class="sec_mark"></div>
+        <div class="sec_mark"></div>
+        <div class="sec_mark"></div>
+        <div class="sec_mark"></div>
+      </section>
+    </div>
+  </main>
+  <footer id="footer">
+    <div class="footer_content">
+      <div class="box">
+        <h3>Sobre nosotros</h3>
+        <div class="box_content">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium dicta nam hic quae nostrum voluptatibus consequatur neque voluptatum unde eligendi qui ducimus magni in officiis consequuntur esse quibusdam, commodi aliquid.</p>
+          <div class="box_social">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <h3>Contactos</h3>
+        <div class="box_content">
+          <div class="box_whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>+54 9 11 8054-1490</span>
+          </div>
+          <div class="box_telefono">
+            <i class="fa-solid fa-phone"></i>
+            <span>11 6699-5008</span>
+          </div>
+          <div class="box_mail">
+            <i class="fa-regular fa-envelope"></i>
+            <span>Ejemplo-mail@gmail.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+          <h3>Envianos un mensaje</h3>
+          <div class="box_content">
+            <form action="#">
+              <div class="box_mail">
+                <label for="mail" class="box_text">Email:</label>
+                <input type="email" id="mail" required>
+              </div>
+              <div class="box_msj">
+                <label for="msj" class="box_text">Mensaje:</label>
+                <textarea name="mensaje" id="msj" cols="25" rows="2"required placeholder="Dejanos tu mensaje..."></textarea>
+              </div>
+              <div class="box_btn">
+                <button type="submit" class="btn btn-block">Enviar</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
+  </footer>
+  <script src="UI_main.js"></script>
+</body>
+</html>

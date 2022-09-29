@@ -1,0 +1,194 @@
+body{
+  overflow-x: hidden;
+}
+/* !Head */
+.head_home{
+  padding: 1.5%;
+  font-size: 40px;
+  align-self: center;
+  border-radius: 1em;
+}
+.head_home i{
+  color: #3C096C;
+} 
+
+/* !Main */
+.main_form{
+  margin-top: 20vmin;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sec_form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* *Botonos */
+.button_form{
+  margin: 2.5em 0;
+  display: flex;
+  flex-direction: row;
+}
+.button_form .btn{
+  margin: 0 1em;
+  padding: 1em;
+  font-size: 2rem;
+  background: none;
+  color: #7B2CBF;
+  font-style: italic;
+  font-weight: 600;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular';
+}
+.btn-active{
+  color: #3C096C;
+  border-bottom: 2px solid #3C096C;;
+}
+.button_form .btn:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+/* *Form */
+.form{
+  font-family: Verdana;
+  height: 55vh;
+  display: none;
+}
+.form-active{
+  display: block;
+}
+.form_content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form_input{
+  margin: 2em ;
+}
+.form_check{
+  margin: 0 1.5em;
+}
+.form_check input{
+  margin: 0 0.5em;
+  accent-color: #7B2CBF;
+}
+.form_check label{
+  font-weight: 400;
+}
+.form_content input[type="submit"]{
+  padding: .5em;
+  font-size: 1.8rem;
+  margin: 1em;
+  width: 150px;
+  border: none;
+  border-radius: 2em;
+  background: none;
+  color: #3C096C;
+  transition: 0.5s;
+}
+.form_content input[type="submit"]:hover{
+  color: #fff;
+  background-color:#3C096C;
+}
+
+.input_par {
+  display: flex;
+}
+
+/* !Inputs */
+.group {
+  position: relative;
+}
+.input {
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 200px;
+  border: none;
+  border-bottom: 1px solid #515151;
+  background: transparent;
+}
+ .input:focus {
+  outline: none;
+ }
+.group label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+ }
+ .input:focus ~ label, .input:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: #7B2CBF;
+ }
+ .bar {
+  position: relative;
+  display: block;
+  width: 200px;
+ }
+ .bar:before, .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #7B2CBF;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+ }
+ .bar:before {
+  left: 50%;
+ }
+ .bar:after {
+  right: 50%;
+ }
+ .input:focus ~ .bar:before, .input:focus ~ .bar:after {
+  width: 50%;
+ }
+ .highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+ }
+ .input:focus ~ .highlight {
+  animation: inputHighlighter 0.3s ease;
+ }
+ @keyframes inputHighlighter {
+  from {
+   background: #7B2CBF;
+  }
+ 
+  to {
+   width: 0;
+   background: transparent;
+  }
+ }
+
+#confirmPass{
+  font-size: 15px;
+}
+
+@media screen and (max-width:700px) {
+  .input_par {
+    display: inline;
+  }
+  .form_input{
+    margin: 0  0 1.5em 0;
+  }
+}
+

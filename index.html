@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marks</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="head noselect">
+    <div class="head_cont">
+      <div class="head_logo">
+        <img src="Mulitmedia/Logo/png/logo-no-background.png" alt="Logo" class="logo_img img-responsive">
+      </div>     
+      <div class="nav">
+        <ul class="nav_link">
+          <li><a href="UI/UI.html">Interfaz</a></li>
+          <li><a href="#footer">Contactanos</a></li>
+        </ul>
+        <div class="btn-group">
+          <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+            <i class="fa-solid fa-user"></i>Log In<i class="fa-solid fa-angle-down"></i>
+          </button>
+          <ul class="dropdown-menu pull-right">
+            <li><a id="LogIn" class="dropdown-item" href="Form/form.html">Log In</a></li>
+            <li><a id="SignIn" class="dropdown-item" href="Form/form.html">Sign In</a></li>
+          </ul>
+        </div>      
+      </div> 
+    </div>       
+  </header>
+
+  <main class="main">
+    <section class="main_sec">
+      <div class="sec_img">
+        <img src="Mulitmedia/home_img.svg" alt="Ilustracion-home" class="img_content">
+      </div>
+      <div class="sec_content">
+        <h2 class="sec_content_title">¿Qué es Marks?</h2>
+        <p class="sec_content_parraf">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem iure nihil pariatur animi libero, laboriosam, odio, temporibus dolor quasi aliquam ipsum? Dolor, repudiandae nulla. Unde illo facere ipsam consectetur labore.
+        </p>
+      </div>
+    </section>
+    <section class="main_sec">
+      <div class="sec_content">
+        <h2 class="sec_content_title">¿Como funciona Marks?</h2>
+        <p class="sec_content_parraf">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis maxime adipisci! Tempore corporis sint error iusto, possimus numquam quae culpa mollitia. Id, numquam sint molestias laboriosam odit culpa quaerat!</p>
+      </div>
+      <div class="sec_img">
+        <img src="Mulitmedia/Tabs-amico.svg" alt="Ilustracion-home2" class="img_content">
+      </div>
+    </section>
+  </main>
+  
+  <footer id="footer">
+    <div class="footer_content">
+      <div class="box">
+        <h3>Sobre nosotros</h3>
+        <div class="box_content">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium dicta nam hic quae nostrum voluptatibus consequatur neque voluptatum unde eligendi qui ducimus magni in officiis consequuntur esse quibusdam, commodi aliquid.</p>
+          <div class="box_social noselect">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <h3 class="noselect">Contactos</h3>
+        <div class="box_content">
+          <div class="box_whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>+54 9 11 8054-1490</span>
+          </div>
+          <div class="box_telefono">
+            <i class="fa-solid fa-phone"></i>
+            <span>11 6699-5008</span>
+          </div>
+          <div class="box_mail">
+            <i class="fa-regular fa-envelope"></i>
+            <span>Ejemplo-mail@gmail.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="box noselect">
+          <h3>Envianos un mensaje</h3>
+          <div class="box_content">
+            <form action="#">
+              <div class="box_mail">
+                <label for="mail" class="box_text">Email:</label>
+                <input type="email" id="email">
+                <span id="result"></span>
+              </div>
+              <div class="box_msj">
+                <label for="msj" class="box_text">Mensaje:</label>
+                <textarea name="mensaje" id="msj" cols="25" rows="2" required placeholder="Dejanos tu mensaje..."></textarea>
+              </div>
+              <div class="box_btn">
+                <button type="submit" class="btn btn-block" onclick="sendMsj()">Enviar</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/94b351fdb3.js" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+</body>
+</html>

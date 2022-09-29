@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marks - Form</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+  <script src="https://kit.fontawesome.com/94b351fdb3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="form_style.css">
+</head>
+<body>
+  <header class="head noselect">
+    <div class="head_cont">
+      <div class="head_logo">
+        <img src="../Mulitmedia/Logo/png/logo-no-background.png" alt="Logo" class="logo_img img-responsive">
+      </div>      
+      <div class="head_home">
+        <a href="../index.html">
+          <i class="fa-solid fa-house-chimney"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+  <main class="main_form">
+    <section class="sec_form noselect">
+      <div class="button_form">
+        <button class="btn btn-active"> Ingresar</button>
+        <button class="btn"> Registrarse</button>
+      </div>
+
+      <form action="#" class="form form-active">
+        <fieldset class="form_content">
+          <div class="form_input group">
+            <input required type="text" class="input" name="log_user">
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Usuario</label>
+          </div>
+          <div class="form_input group">
+            <input required type="password" class="input" name="log_password">
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Contraseña</label>
+          </div>
+          <div class="form_check">
+            <input type="checkbox" name="recordar" id="recordar"><label for="recordar">Recordar cuenta</label>
+          </div>
+          <input type="submit" value="Entrar">
+        </fieldset>
+      </form>
+
+      <form action="#" class="form noselect">
+        <fieldset class="form_content">
+          <div class="input_par">
+            <div class="form_input group noselect">
+              <input required type="text" class="input" name="sign_user">
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>Usuario</label>
+            </div>
+            <div class="form_input group noselect">
+              <input required type="text" class="input" name="sign_user" id="email_form">
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>Email</label>
+              <span id="form_mail_valid"></span>
+            </div>
+          </div>
+          <div class="input_par">
+            <div class="form_input group noselect">
+              <input required type="password" class="input" id="sign_password">
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>Contraseña</label>
+            </div>
+            <div class="form_input group noselect">
+              <input required type="password" class="input" id="sign_confirPass">
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label id="confirmPass">Confirmar Contraseña</label>
+              <span id="validatePass"></span>
+            </div>
+          </div>
+          <div class="form_check">
+            <input type="checkbox" name="accept" id="accept"><label for="accept">Aceptar <a href="#">Terminos y condiciones</a> </label>
+          </div>
+            <input type="submit" value="Registrarse">
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <div class="footer_content">
+      <div class="box">
+        <h3>Sobre nosotros</h3>
+        <div class="box_content">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium dicta nam hic quae nostrum voluptatibus consequatur neque voluptatum unde eligendi qui ducimus magni in officiis consequuntur esse quibusdam, commodi aliquid.</p>
+          <div class="box_social noselect">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <h3 class="noselect">Contactos</h3>
+        <div class="box_content">
+          <div class="box_whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>+54 9 11 8054-1490</span>
+          </div>
+          <div class="box_telefono">
+            <i class="fa-solid fa-phone"></i>
+            <span>11 6699-5008</span>
+          </div>
+          <div class="box_mail">
+            <i class="fa-regular fa-envelope"></i>
+            <span>Ejemplo-mail@gmail.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="box noselect">
+          <h3>Envianos un mensaje</h3>
+          <div class="box_content">
+            <form action="#">
+              <div class="box_mail">
+                <label for="mail" class="box_text">Email:</label>
+                <input type="email" id="email">
+                <span id="result"></span>
+              </div>
+              <div class="box_msj">
+                <label for="msj" class="box_text">Mensaje:</label>
+                <textarea name="mensaje" id="msj" cols="25" rows="2" required placeholder="Dejanos tu mensaje..."></textarea>
+              </div>
+              <div class="box_btn">
+                <button type="submit" class="btn btn-block" onclick="sendMsj()">Enviar</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="../main.js"></script>
+  <script src="form.js"></script>
+</body>
+</html>
