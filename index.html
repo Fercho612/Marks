@@ -15,7 +15,7 @@
       <div class="head_logo">
         <img src="Mulitmedia/Logo/png/logo-no-background.png" alt="Logo" class="logo_img img-responsive">
       </div>     
-      <div class="nav">
+      <nav class="nav">
         <ul class="nav_link">
           <li><a href="UI/UI.html">Interfaz</a></li>
           <li><a href="#footer">Contactanos</a></li>
@@ -29,7 +29,21 @@
             <li><a id="SignIn" class="dropdown-item" href="Form/form.html">Sign In</a></li>
           </ul>
         </div>      
-      </div> 
+      </nav> 
+      <nav class="nav_resp">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="UI/UI.html">Interfaz</a></li>
+            <li><a class="dropdown-item" href="#footer">Contactanos</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a id="LogIn" class="dropdown-item" href="Form/form.html">Log In</a></li>
+            <li><a id="SignIn" class="dropdown-item" href="Form/form.html">Sign In</a></li>
+          </ul>
+        </div>
+      </nav>
     </div>       
   </header>
 
@@ -93,14 +107,16 @@
               <div class="box_mail">
                 <label for="mail" class="box_text">Email:</label>
                 <input type="email" id="email">
-                <span id="result"></span>
+                <span id="validMail"></span>
               </div>
               <div class="box_msj">
                 <label for="msj" class="box_text">Mensaje:</label>
-                <textarea name="mensaje" id="msj" cols="25" rows="2" required placeholder="Dejanos tu mensaje..."></textarea>
+                <textarea name="mensaje" id="msj" cols="25" rows="2" placeholder="Dejanos tu mensaje..."></textarea>
+                <span id="validMsj"></span>
               </div>
               <div class="box_btn">
                 <button type="submit" class="btn btn-block" onclick="sendMsj()">Enviar</button>
+                <p id="validSend"></p>
               </div>
             </form>
           </div>

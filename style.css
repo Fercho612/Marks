@@ -61,6 +61,9 @@ body{
 #SignIn{
   color: #3C096C;
 }
+.nav_resp{
+  display: none;
+}
 /* !Footer */
 #footer{
   width: 100vw;
@@ -204,36 +207,20 @@ img[alt="Ilustracion-home2"]{
     height: auto;
     padding: 2em;
   }
-}
-@media screen and (max-width: 550px) {
   /* !Head */
-  .nav_log{
+  .nav{
     display: none;
   }
   .nav_resp{
     display: block;
   }
-  .log_menu_resp{
-    position: absolute;
-    padding: 10px;
-    width: 150px;
-    right: 0px;
-    top: -150px;
-    border-radius: 0 0 0 1em;
-    border: #3C096C solid 1px;
-    background-color: #f5f5f5;
-    display: flex;
-    flex-direction: column;
-    transition: 1s;
-  }
-  .menu_resp{
-    top: 12vh !important;
-  }
-  .btn_menu{
+  .nav_resp button{
     background: none;
+    font-size: 3em;
+    color: #3C096C;
   }
-  .btn_menu i{
-    color: #7B2CBF;
-    font-size: 1.5em;
+  .nav_resp .dropdown-item{
+    color: #3C096C;
+    margin: 0.5em;
   }
 }
