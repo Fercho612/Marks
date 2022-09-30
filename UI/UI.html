@@ -17,22 +17,14 @@
       <div class="head_logo">
        <a href="../index.html"><img src="../Mulitmedia/Logo/png/logo-no-background.png" alt="Logo" class="logo_img img-responsive"></a> 
       </div>      
-      <button class="btn head_icon">
-        <i class="fa-solid fa-user"></i>
-      </button>
-      <div class="head_profile">
-        <div class="profile_item">
-          <i class="fa-regular fa-user"></i>
-          <a href="#">
-            <span>{profile}</span>
-          </a>
-        </div>
-        <div class="profile_item">
-         <a href="../index.html">
-           <span>Cerrar sesión</span>
-        </a> 
-          <i class="fa-solid fa-arrow-right-from-bracket"></i>
-        </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-secondary dropdown-toggle head_icon" data-bs-toggle="dropdown"  data-bs-display="static" aria-expanded="false">
+          <i class="fa-solid fa-user"></i>
+        </button>
+        <ul class="dropdown-menu pull-right">
+          <li><a class="dropdown-item" href="#"><i class="fa-regular fa-user"></i>{Profile}</a></li>
+          <li><a class="dropdown-item" href="../index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>Cerrar sesión</span></a></li>
+        </ul>
       </div>
     </div>
   </header>
@@ -54,7 +46,7 @@
         <h3>Filtrar:</h3>
         <ul>
           <li><label for="fil_all">Todos:</label><input type="radio" name="filtro" id="fil_all" checked></li>
-          <li><label for="fil_eti">Favoritos</label><input type="radio" name="filtro" id="fil_eti"></li>
+          <li><label for="fil_eti">Favoritos:</label><input type="radio" name="filtro" id="fil_eti"></li>
           <li><label for="fil_color">Etiqueta:</label><input type="radio" name="filtro" id="fil_color"></li>
         </ul>
         <h3>Ordenar por:</h3>
@@ -170,23 +162,28 @@
       <div class="box">
           <h3>Envianos un mensaje</h3>
           <div class="box_content">
-            <form action="#">
+            <form>
               <div class="box_mail">
                 <label for="mail" class="box_text">Email:</label>
-                <input type="email" id="mail" required>
+                <input id="email" type="email" placeholder="Ejemplo:juam@aaa.com">
               </div>
               <div class="box_msj">
                 <label for="msj" class="box_text">Mensaje:</label>
-                <textarea name="mensaje" id="msj" cols="25" rows="2"required placeholder="Dejanos tu mensaje..."></textarea>
+                <textarea id="msj" name="mensaje" cols="25" rows="2" placeholder="Dejanos tu mensaje..."></textarea>
               </div>
               <div class="box_btn">
-                <button type="submit" class="btn btn-block">Enviar</button>
+                <button type="button" class="btn btn-block" onclick="sendMsj()">Enviar</button>
+                <div class="validSend"></div>
               </div>
             </form>
           </div>
       </div>
     </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="../main.js"></script>
   <script src="UI_main.js"></script>
 </body>
 </html>

@@ -14,25 +14,13 @@
   font-size: 25px;
   color: #fff;
 }
-.head_profile{
+.dropdown-menu{
   position: absolute;
-  width: 150px;
-  right: 7.5%;
-  top: -200px;
-  background: linear-gradient(rgba(60, 9, 108,0.8),rgba(60, 9, 108,0.8));
+  top: 9.5vh;
 }
-.profile_desp{
-  top: 12vh;
-}
-.profile_item{
-  text-align: center;
-  font-size: 18px;
-  color: #fff;
-  height: 50px;
-  padding: 5%
-}
-.profile_item a{
-  color: #fff;
+.dropdown-menu i{
+  margin: 1em;
+  color: #3C096C;
 }
 
 /* !Main*/

@@ -1,4 +1,7 @@
-const tabs = document.querySelectorAll(".btn"), forms = document.querySelectorAll(".form");
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+const tabs = document.querySelectorAll(".btn_log"), forms = document.querySelectorAll(".form");
 
 tabs.forEach((tab, index) => {
   tab.addEventListener('click',() => {
@@ -14,41 +17,88 @@ tabs.forEach((tab, index) => {
   });
 });
 
-function matchPass(p1,p2){
-  return p1 === p2;
-}
+const signIn = () => {
+  const user = $('#sign_user').val();
+  const mail = $('#sign_email').val();
+  const password = $('#sign_pass').val();
+  const confirmPassword = $('#sign_confirPass').val();
+  const check = $('#accept');
+  let sendSingIn = true;
 
-const validPass = () => {
-  const pass1 = $('#sign_password').val();
-  const pass2 = $('#sign_confirPass').val();
-  const $validPass = $('#validatePass');
-  $validPass.text('');
-
-  if(matchPass(pass1,pass2)){
-    $validPass.text('Coinciden las contrasenas');
-    $validPass.css('color', '#191');
-  }else {
-    $validPass.text('No coinciden las contrasenas');
-    $validPass.css('color', '#f55');
-  }
-}
-
-const validateSign = () => {
-  const $result = $('#form_mail_valid');
-  $result.text('');
-  const email = $('#email_form').val();
-
-  if (validateEmail(email)) {
-    $result.text('Mail valido');
-    $result.css('color', '#191');
+  if(user.length < 5){
+    $(".group_user").get(0).style.setProperty("--inPasscolor", "#f55");
+    $(".helpIconUser").css("display","block");
+    $(".checkIconUser").css("display","none");
+    $(".helpIconUser").attr({
+      "colors": 'primary:#f55'
+    });
+    sendSingIn = false;
   } else {
-    $result.text('Mail no valido');
-    $result.css('color', '#f55');
+    $(".group_user").get(0).style.setProperty("--input-color", "#1a1");
+    $(".helpIconUser").css("display","none");
+    $(".checkIconUser").css("display","block");
+    $("#tooltipUser").attr({
+      "data-bs-title": 'Usuario valido :D'
+    });
   }
- 
-  return false;
-}
+  if(!validEmail.test(mail)){
+    $(".group_email").get(0).style.setProperty("--input-color", "#f55");
+    $(".helpIconMail").css("display","block");
+    $(".checkIconMail").css("display","none");
+    $(".helpIconMail").attr({
+      "colors": 'primary:#f55'
+    });
+    sendSingIn = false;
+  } else {
+    $(".group_email").get(0).style.setProperty("--input-color", "#1a1");
+    $(".helpIconMail").css("display","none");
+    $(".checkIconMail").css("display","block");
+    $("#tooltipHelp").attr({
+      "data-bs-title": 'Mail Valido :D'
+    });
+  }
+  if(password.length < 8){
+    $(".group_pass").get(0).style.setProperty("--input-color", "#f55");
+    $(".helpIconPass").css("display","block");
+    $(".checkIconPass").css("display","none");
+    $(".helpIconPass").attr({
+      "colors": 'primary:#f55'
+    });
+    sendSingIn = false;
+  } else {
+    $(".group_pass").get(0).style.setProperty("--input-color", "#1a1");
+    $(".helpIconPass").css("display","none");
+    $(".checkIconPass").css("display","block");
+    $("#tooltipPass").attr({
+      "data-bs-title": 'Contraseña Valida :D'
+    });
+  }
+  if(password != confirmPassword){
+    $(".group_pass2").get(0).style.setProperty("--input-color", "#f55");
+    $(".helpIconPass2").css("display","block");
+    $(".checkIconPass2").css("display","none");
+    $(".helpIconPass2").attr({
+      "colors": 'primary:#f55'
+    });
+    sendSingIn = false;
+  } else {
+    $(".group_pass2").get(0).style.setProperty("--input-color", "#1a1");
+    $(".helpIconPass2").css("display","none");
+    $(".checkIconPass2").css("display","block");
+    $("#tooltipPass2").attr({
+      "data-bs-title": 'Contraseña Valida :D'
+    });
+  }
+  if(!check.prop("checked")){
+    sendSingIn = false;
+  }
+  if(sendSingIn){
+    alert("Registro Completado");
+    window.location.href = "../UI/UI.html";
+  }
+}; 
 
-
-$('#email_form').on('input', validateSign);
-$('#sign_confirPass').on('input',validPass)
+const logIn = () => {
+  alert("Se inicio sesion correctamente");
+  window.location.href = "../UI/UI.html";
+};

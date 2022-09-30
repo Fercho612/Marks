@@ -1,3 +1,7 @@
+:root{
+  --input-color: #7B2CBF;
+}
+
 body{
   overflow-x: hidden;
 }
@@ -16,11 +20,13 @@ body{
 .main_form{
   margin-top: 20vmin;
   width: 100vw;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 .sec_form{
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,21 +41,22 @@ body{
 .button_form .btn{
   margin: 0 1em;
   padding: 1em;
-  font-size: 2rem;
+  font-size: 1.5em;
   background: none;
   color: #7B2CBF;
   font-style: italic;
   font-weight: 600;
   font-family: 'Lucida Sans', 'Lucida Sans Regular';
 }
+.button_form .btn:hover{
+  color: #7B2CBF;
+  border-bottom: 2px solid #3C096C;
+}
 .btn-active{
   color: #3C096C;
-  border-bottom: 2px solid #3C096C;;
+  border-bottom: 2px solid #3C096C;
 }
-.button_form .btn:focus{
-  outline: none;
-  box-shadow: none;
-}
+
 
 /* *Form */
 .form{
@@ -68,6 +75,9 @@ body{
 .form_input{
   margin: 2em ;
 }
+.recordar{
+  align-self: flex-start;
+}
 .form_check{
   margin: 0 1.5em;
 }
@@ -78,18 +88,18 @@ body{
 .form_check label{
   font-weight: 400;
 }
-.form_content input[type="submit"]{
-  padding: .5em;
-  font-size: 1.8rem;
+.btn_send button[type="button"]{
+  padding: 3px;
+  font-size: 1.5rem;
   margin: 1em;
-  width: 150px;
+  width: 200px;
   border: none;
   border-radius: 2em;
   background: none;
   color: #3C096C;
   transition: 0.5s;
 }
-.form_content input[type="submit"]:hover{
+.btn_send button:hover{
   color: #fff;
   background-color:#3C096C;
 }
@@ -106,13 +116,14 @@ body{
   font-size: 16px;
   padding: 10px 10px 10px 5px;
   display: block;
-  width: 200px;
+  width: 170px;
   border: none;
   border-bottom: 1px solid #515151;
   background: transparent;
 }
  .input:focus {
   outline: none;
+  border-bottom: none;
  }
 .group label {
   color: #999;
@@ -129,7 +140,7 @@ body{
  .input:focus ~ label, .input:valid ~ label {
   top: -20px;
   font-size: 14px;
-  color: #7B2CBF;
+  color: var(--input-color);
  }
  .bar {
   position: relative;
@@ -142,7 +153,7 @@ body{
   width: 0;
   bottom: 1px;
   position: absolute;
-  background: #7B2CBF;
+  background: var(--input-color);
   transition: 0.2s ease all;
   -moz-transition: 0.2s ease all;
   -webkit-transition: 0.2s ease all;
@@ -170,7 +181,7 @@ body{
  }
  @keyframes inputHighlighter {
   from {
-   background: #7B2CBF;
+   background: var(--input-color);
   }
  
   to {
@@ -178,9 +189,22 @@ body{
    background: transparent;
   }
  }
-
+.group .btn{
+  position: absolute;
+  padding: 0;
+  border: none;
+  top: 5px;
+  right: 0;
+  background:none;
+}
+.group .btn:hover{
+  background: none;
+}
+.check_icon{
+  display: none;
+}
 #confirmPass{
-  font-size: 15px;
+  font-size: 14px;
 }
 
 @media screen and (max-width:700px) {

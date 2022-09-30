@@ -46,6 +46,7 @@ body{
   border: 1px solid #3C096C;
   border-radius: 1em;
 }
+
 .btn-group .btn{
   padding: 15px;
   color: #fff;
@@ -54,10 +55,16 @@ body{
 .btn-group .btn i{
   margin: 0 5px;
 }
+.btn-group .btn:hover{
+  background: #7B2CBF;
+
+}
 .dropdown-menu{
   text-align: center;
   font-size: 1.2em;
+  top: 25px !important;
 }
+
 #SignIn{
   color: #3C096C;
 }
@@ -142,16 +149,18 @@ body{
   resize: none;
   border: none;
 }
-.box input:focus, .box textarea:focus{
-  outline: none;
-}
+
 .box input{
   height: 30px;
 }
 .box_btn button{
   background: rgb(36, 0, 70);
+  color: #fff;
 }
-
+.box_btn .btn:hover{
+  background: rgba(224, 170, 255,0.5);
+  color: #fff;
+}
 /* !Main */
 
 .main{
