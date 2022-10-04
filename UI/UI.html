@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Markas</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/94b351fdb3.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../normalize.css">
   <link rel="stylesheet" href="../style.css">
@@ -18,30 +18,41 @@
        <a href="../index.html"><img src="../Mulitmedia/Logo/png/logo-no-background.png" alt="Logo" class="logo_img img-responsive"></a> 
       </div>      
       <div class="btn-group">
-        <button type="button" class="btn btn-secondary dropdown-toggle head_icon" data-bs-toggle="dropdown"  data-bs-display="static" aria-expanded="false">
+        <button type="button" class="head_icon" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
           <i class="fa-solid fa-user"></i>
         </button>
-        <ul class="dropdown-menu pull-right">
+        <ul class="dropdown-menu dropdown-menu-lg-end">
           <li><a class="dropdown-item" href="#"><i class="fa-regular fa-user"></i>{Profile}</a></li>
           <li><a class="dropdown-item" href="../index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>Cerrar sesión</span></a></li>
         </ul>
-      </div>
+      </div>    
     </div>
   </header>
-  <main id="main" class="noselect">
-    <div class="main_content row">
-      <button class="main_aside_resp">
-        <span>Marcas <i class="fa-solid fa-plus"></i></span>
-      </button>
-      <button class="main_aside_resp">
-        <span>Filtrar <i class="fa-solid fa-filter"></i></span>
-      </button>
-      <aside class="main_aside col-xs-2">
+  <main id="main" class="noselect mb-5">
+    <div class="main_content container-fluid row m-0 g-0 p-0 justify-content-center">
+      <div class="main_aside_resp row container-fluid m-0 p-0 g-0 justify-content-center">
+        <div class="col-4 m-0">
+          <button>
+            <span>Marcas <i class="fa-solid fa-plus"></i></span>
+          </button>
+        </div>
+        <div class="col-4 m-0">
+          <button>
+            <span>Filtrar <i class="fa-solid fa-filter"></i></span>
+          </button>
+        </div>
+        <div class="col-4 m-0">
+          <button>
+            <span>Ordenar <i class="fa-solid fa-sort"></i></span>
+          </button>
+        </div>
+      </div>
+      <aside class="main_aside col-md-2">
         <h3>Marcas</h3>
         <ul>
-          <li><button class="btn btn-block btn-primary">Crear marca</button></li>
-          <li><button class="btn btn-block btn-mark">Crear etiqueta</button></li>
-          <li><button class="btn btn-block btn-mark">Modificar Etiqueta</button></li>
+          <li><button class="btn btn-primary">Crear marca</button></li>
+          <li><button class="btn btn-mark">Crear etiqueta</button></li>
+          <li><button class="btn btn-mark">Modificar Etiqueta</button></li>
         </ul>
         <h3>Filtrar:</h3>
         <ul>
@@ -57,75 +68,7 @@
           <li> <label for="alfabetico_desc">Alfabetico<i class="fa-solid fa-arrow-down"></i></label> <input type="radio" name="orden" id="alfabetico_desc"></li>
         </ul>
       </aside>
-      <section id="main_sec" class="col-xs-10">
-        <div class="sec_mark sec_mark_ch">
-          <div class="mark_icons">
-            <button class="mark_icons_fav">
-              <i class="fa-sharp fa-solid fa-heart heart_icon"></i>
-            </button>
-            <div class="mark_icons_edit">
-              <i class="fa-solid fa-ellipsis"></i>
-            </div>
-          </div>
-          <a href="https://ipn.com.ar/" target="_blank">
-            <div class="mark_content">
-            <h4>Infinite Loop</h4>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque asperiores esse fugiat
-            </div>
-          </a>
-        </div>
-        <div class="sec_mark">
-          <div class="mark_icons">
-            <button class="mark_icons_fav">
-              <i class="fa-sharp fa-solid fa-heart heart_icon"></i>
-            </button>
-            <div class="mark_icons_edit">
-              <i class="fa-solid fa-ellipsis"></i>
-            </div>
-          </div>
-          <a href="https://ipn.com.ar/" target="_blank">
-            <div class="mark_content">
-            <h4>Infinite Loop</h4>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque asperiores esse fugiat
-            </div>
-          </a>
-        </div>
-        <div class="sec_mark">
-          <div class="mark_icons">
-            <button class="mark_icons_fav">
-              <i class="fa-sharp fa-solid fa-heart heart_icon"></i>
-            </button>
-            <div class="mark_icons_edit">
-              <i class="fa-solid fa-ellipsis"></i>
-            </div>
-          </div>
-          <a href="https://ipn.com.ar/" target="_blank">
-            <div class="mark_content">
-            <h4>Infinite Loop</h4>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque asperiores esse fugiat
-            </div>
-          </a>
-        </div>
-        <div class="sec_mark">
-          <div class="mark_icons">
-            <button class="mark_icons_fav">
-              <i class="fa-sharp fa-solid fa-heart heart_icon"></i>
-            </button>
-            <div class="mark_icons_edit">
-              <i class="fa-solid fa-ellipsis"></i>
-            </div>
-          </div>
-          <a href="https://ipn.com.ar/" target="_blank">
-            <div class="mark_content">
-            <h4>Infinite Loop</h4>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque asperiores esse fugiat
-            </div>
-          </a>
-        </div>
-        <div class="sec_mark"></div>
-        <div class="sec_mark"></div>
-        <div class="sec_mark"></div>
-        <div class="sec_mark"></div>
+      <section id="main_sec" class="col-md-9">
       </section>
     </div>
   </main>
@@ -135,7 +78,7 @@
         <h3>Sobre nosotros</h3>
         <div class="box_content">
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium dicta nam hic quae nostrum voluptatibus consequatur neque voluptatum unde eligendi qui ducimus magni in officiis consequuntur esse quibusdam, commodi aliquid.</p>
-          <div class="box_social">
+          <div class="box_social noselect">
             <a href="#"><i class="fa-brands fa-facebook"></i></a>
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
             <a href="#"><i class="fa-brands fa-twitter"></i></a>
@@ -143,7 +86,7 @@
         </div>
       </div>
       <div class="box">
-        <h3>Contactos</h3>
+        <h3 class="noselect">Contactos</h3>
         <div class="box_content">
           <div class="box_whatsapp">
             <i class="fa-brands fa-whatsapp"></i>
@@ -164,15 +107,15 @@
           <div class="box_content">
             <form>
               <div class="box_mail">
-                <label for="mail" class="box_text">Email:</label>
-                <input id="email" type="email" placeholder="Ejemplo:juam@aaa.com">
+                <label for="mail" class="box_text valid_Mail">Email:</label>
+                <input id="email" type="email" placeholder="Ejemplo:juam@aaa.com" class="valid_Mail valid_input_mail" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Ingrese su Mail">
               </div>
               <div class="box_msj">
-                <label for="msj" class="box_text">Mensaje:</label>
-                <textarea id="msj" name="mensaje" cols="25" rows="2" placeholder="Dejanos tu mensaje..."></textarea>
+                <label for="msj" class="box_text valid_txt">Mensaje:</label>
+                <textarea id="msj" class="valid_txt valid_input_txt" name="mensaje" cols="25" rows="2" placeholder="Dejenos su mensaje..." data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Ingrese un minimo de 10 caracteres"></textarea>
               </div>
               <div class="box_btn">
-                <button type="button" class="btn btn-block" onclick="sendMsj()">Enviar</button>
+                <button type="button" class="btn" onclick="sendMsj()">Enviar</button>
                 <div class="validSend"></div>
               </div>
             </form>

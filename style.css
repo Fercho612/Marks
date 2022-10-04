@@ -3,13 +3,16 @@
 body{
   overflow-x: hidden;
 }
+a{
+  text-decoration: none;
+}
 
 /* !Head */
 .head{
   position: fixed;
   z-index: 100;
   width: 100vw;
-  height: 12vh;
+  height: 110px;
   top: 0;
   background-color: #fff;
   border-bottom: 1px solid #3C096C;
@@ -22,7 +25,7 @@ body{
   flex-direction: row;
   justify-content:space-between;
   align-items: center;
-  padding: 0.5% 7.5%;
+  padding: 0.5% 5vmin;
 }
 .head_logo, .logo_img{
   height: 100%;  
@@ -46,7 +49,6 @@ body{
   border: 1px solid #3C096C;
   border-radius: 1em;
 }
-
 .btn-group .btn{
   padding: 15px;
   color: #fff;
@@ -57,20 +59,19 @@ body{
 }
 .btn-group .btn:hover{
   background: #7B2CBF;
-
 }
 .dropdown-menu{
   text-align: center;
   font-size: 1.2em;
   top: 25px !important;
 }
-
 #SignIn{
   color: #3C096C;
 }
 .nav_resp{
   display: none;
 }
+
 /* !Footer */
 #footer{
   width: 100vw;
@@ -144,10 +145,10 @@ body{
   width: 100%;
   font-size: 1.3em;
   padding-left: 10px;
-  color: #fff;
-  background: rgba(224, 170, 255,0.5);
+  color: #000;
   resize: none;
   border: none;
+  border-radius: 0.5em;
 }
 
 .box input{
@@ -164,7 +165,7 @@ body{
 /* !Main */
 
 .main{
-  margin-top: 18vmin;
+  margin-top: 130px;
   margin-bottom: 5vmin;
   display: flex;
   flex-direction: column;
@@ -189,7 +190,7 @@ img[alt="Ilustracion-home2"]{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 3em 0;
+  margin: 1em 0;
 }
 .sec_content_title{
   font-family: 'Poppins', sans-serif;
@@ -206,16 +207,6 @@ img[alt="Ilustracion-home2"]{
 }
 
 @media screen and (max-width: 750px){
-  /* !Main */
-  .sec_img{
-    display: none;
-  }
-  .sec_content{
-    border: #3C096C 3px solid;
-    border-radius: 1em;
-    height: auto;
-    padding: 2em;
-  }
   /* !Head */
   .nav{
     display: none;
@@ -227,9 +218,29 @@ img[alt="Ilustracion-home2"]{
     background: none;
     font-size: 3em;
     color: #3C096C;
+    border: 0;
+  }
+  .dropdown-menu{
+    top: 8px !important;
+    width: 180px !important;
   }
   .nav_resp .dropdown-item{
     color: #3C096C;
     margin: 0.5em;
+  }
+  /* !Main */
+  .sec_img{
+    display: none;
+  }
+  .sec_content{
+    border: #3C096C 3px solid;
+    border-radius: 1em;
+    height: auto;
+    padding: 2em;
+  }
+  /*!Footer*/
+  .box{
+    min-width: 100%;
+    overflow: hidden;
   }
 }

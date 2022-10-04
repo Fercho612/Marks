@@ -1,5 +1,4 @@
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
 
 const tabs = document.querySelectorAll(".btn_log"), forms = document.querySelectorAll(".form");
 
@@ -73,7 +72,7 @@ const signIn = () => {
       "data-bs-title": 'Contraseña Valida :D'
     });
   }
-  if(password != confirmPassword){
+  if((confirmPassword.length < 8) || (password != confirmPassword)){
     $(".group_pass2").get(0).style.setProperty("--input-color", "#f55");
     $(".helpIconPass2").css("display","block");
     $(".checkIconPass2").css("display","none");
@@ -90,7 +89,10 @@ const signIn = () => {
     });
   }
   if(!check.prop("checked")){
+    $("#accept").css("outline", "1px solid #f55");
     sendSingIn = false;
+  } else{
+    $("#accept").removeAttr("style");
   }
   if(sendSingIn){
     alert("Registro Completado");

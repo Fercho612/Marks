@@ -1,22 +1,24 @@
+:root{
+  --tag:#fff;
+}
+
 /* !Head */
 .head_icon{
   position: relative;
-  height: 70px;
-  width: 70px;
+  height: 80px;
+  width: 80px;
   border-radius: 50%;
   background-color: #7B2CBF;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   cursor: pointer;
+  border: none;
 }
 .head_icon i{
-  font-size: 25px;
+  font-size: 35px;
   color: #fff;
 }
-.dropdown-menu{
-  position: absolute;
-  top: 9.5vh;
+.dropdown-menu {
+  top: 10vh !important;
 }
 .dropdown-menu i{
   margin: 1em;
@@ -25,20 +27,8 @@
 
 /* !Main*/
 #main{
-  margin-top: 13vh;
+  margin-top: 130px;
   width: 100vw;
-}
-.main_content{
-  width: 100%;
-  padding: 1% 5vmin;
-}
-.main_aside_resp{
-  display: none;
-  padding: 2%;
-  font-size: 25px;
-  color: #7B2CBF;
-  border: none;
-  background: none;
 }
 .main_aside{
   position: relative;
@@ -65,7 +55,6 @@
   outline: none;
   color: #fff;
 }
-
 .main_aside ul{
   width: 90%;
   margin-left: 10%;
@@ -73,6 +62,10 @@
 }
 .main_aside li{
   margin: 7px;
+}
+.main_aside li .btn{
+  display: block;
+  width: 100%;
 }
 .main_aside li i{
   margin: 7px;
@@ -82,30 +75,48 @@
   right: 15%;
   accent-color: #7B2CBF;
 }
+.main_aside_resp{
+  display: none;
+}
+
+.main_aside_resp button{
+  color: #7B2CBF;
+  background: none;
+  border: none;
+  font-size: 25px;
+}
+
 #main_sec{
-  padding: 2%;
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
   grid-template-rows: repeat(auto, minmax(300px,1fr));
 }
-
 .sec_mark{
-  background: linear-gradient(rgba(5, 7, 12, .5),rgba(5, 7, 12, .5)), center no-repeat;
-  background-size: cover;
   display: inline-block;
   margin: 1%;
   padding: 5%;
   border-radius: 1.5em;
-  border: 3px solid black;
   height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: 3px solid var(--tag);
 }
-.sec_mark_ch{
-  background: linear-gradient(rgba(5, 7, 12, .4),rgba(5, 7, 12, .4)), center no-repeat url('https://media-exp1.licdn.com/dms/image/C4D0BAQGxKfpoXXEckQ/company-logo_200_200/0/1559671842801?e=2147483647&v=beta&t=9HDBIGGeQI1mofR8Br90CCqBDf812clBY6CU6njq5RQ');
+.mark_content{
+ position: relative;
 }
-
+.mark_content h4, .mark_content p{
+  color: var(--tag);
+}
+.tag_icon{
+  position: absolute;
+  right: 0;
+}
+.tag_icon i{
+  color: var(--tag);
+  font-size: 1.2em;
+  line-height: 10px;
+}
 .mark_icons{
   display: flex;
   justify-content: space-between;
@@ -113,8 +124,6 @@
 .mark_icons_edit, .mark_icons_fav{
   font-size: 20px;
   line-height: 20px;
-}
-.mark_icons_fav{
   background: none;
   border: none;
   color: #bbb;
@@ -124,14 +133,23 @@
   cursor: pointer;
 }
 .mark_icons_edit{
-  color: #fff;
+  color: var(--tag);
 }
 .mark_icons_fav:hover{
-  color: #D11;
+  color: var(--tag);
   cursor: pointer;
 }
 .red_heart{
-  color: #D11;
+  color: var(--tag);
+}
+.mark_icons .dropdown-menu{
+  background: transparent;
+  border: 1px solid #bbb;
+  top: 0 !important;
+  width: 10px !important;
+}
+.mark_icons .dropdown-menu button:hover{
+  background: #aaa;
 }
 .mark_content {
   width: 100%;
@@ -141,7 +159,7 @@
   color: #fff;  
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1400px) {
   #main_sec{
     width: 100%;
     margin: 0;
