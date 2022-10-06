@@ -16,7 +16,7 @@
       <div class="head_logo">
         <img src="../Mulitmedia/Logo/png/logo-no-background.png" alt="Logo" class="logo_img img-responsive">
       </div>      
-      <div class="head_home">
+      <div class="head_home noselect">
         <a href="../index.html">
           <i class="fa-solid fa-house-chimney"></i>
         </a>
@@ -30,7 +30,7 @@
         <button class="btn btn_log"> Registrarse</button>
       </div>
 
-      <form class="form form-active">
+      <form class="form form-active m-1">
         <fieldset class="form_content">
           <div class="form_input group">
             <input required type="text" class="input" name="log_user">
@@ -53,7 +53,7 @@
         </fieldset>
       </form>
 
-      <form class="form noselect">
+      <form class="form m-3 noselect">
         <fieldset class="form_content">
           <div class="input_par">
             <div class="form_input group group_user noselect">
@@ -154,6 +154,7 @@
           </div>
           <div class="form_check">
             <input type="checkbox" name="accept" id="accept"><label for="accept">Aceptar <a href="#">Terminos y condiciones</a> </label>
+            <div class=""></div>
           </div>
           <div class="btn_send">
             <button type="button" onclick="signIn()">Registrarse</button>
@@ -163,7 +164,7 @@
     </section>
   </main>
 
-  <footer id="footer">
+  <footer id="footer" class="noselect">
     <div class="footer_content">
       <div class="box">
         <h3>Sobre nosotros</h3>
@@ -193,23 +194,20 @@
           </div>
         </div>
       </div>
-      <div class="box noselect">
+      <div class="box">
           <h3>Envianos un mensaje</h3>
           <div class="box_content">
             <form>
               <div class="box_mail">
-                <label for="mail" class="box_text">Email:</label>
-                <input id="email" type="email" placeholder="Ejemplo:juam@aaa.com">
-                <span id="validMail"></span>
+                <label for="mail" class="box_text valid_Mail">Email:</label>
+                <input id="email" type="email" placeholder="Ejemplo:juam@aaa.com" class="valid_Mail valid_input_mail" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Ingrese su Mail">
               </div>
               <div class="box_msj">
-                <label for="msj" class="box_text">Mensaje:</label>
-                <textarea id="msj" name="mensaje" cols="25" rows="2" placeholder="Dejanos tu mensaje..."></textarea>
-                <span id="validMsj"></span>
+                <label for="msj" class="box_text valid_txt">Mensaje:</label>
+                <textarea id="msj" class="valid_txt valid_input_txt" name="mensaje" cols="25" rows="2" placeholder="Dejenos su mensaje..." data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Ingrese un minimo de 10 caracteres"></textarea>
               </div>
               <div class="box_btn d-grid gap-2">
-                <button type="button" class="btn btn-block" onclick="sendMsj()">Enviar</button>
-                <div class="validSend"></div>
+                <button type="button" class="btn" onclick="sendMsj()">Enviar</button>
               </div>
             </form>
           </div>
