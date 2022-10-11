@@ -70,7 +70,7 @@
 .main_aside li i{
   margin: 7px;
 }
-.main_aside input{
+.radio_group input{
   position: absolute;
   right: 15%;
   accent-color: #7B2CBF;
@@ -78,7 +78,6 @@
 .main_aside_resp{
   display: none;
 }
-
 .main_aside_resp button{
   color: #7B2CBF;
   background: none;
@@ -94,13 +93,25 @@
 .main_aside_resp .dropdown-menu .dropdown-item i{
   margin: 0 0.5em;
 }
+
+.modal_group_inputs{
+  height: 50px;
+}
+.modal_inputs{
+  width: auto;
+  height: 70%;
+  border-radius: .5em;
+  resize: none;
+}
+.modal_inputs_descp{
+  height: 100%;
+}
+
 #main_sec{
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-  grid-template-rows: repeat(auto, minmax(300px,1fr));
+  grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
 }
 .sec_mark{
-  display: inline-block;
   margin: 1%;
   padding: 5%;
   border-radius: 1.5em;
@@ -146,6 +157,9 @@
 .mark_icons_fav:hover{
   color: var(--tag);
   cursor: pointer;
+}
+.fav-active{
+  color: var(--tag);
 }
 .red_heart{
   color: var(--tag);

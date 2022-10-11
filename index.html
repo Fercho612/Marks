@@ -106,11 +106,11 @@
             <form>
               <div class="box_mail">
                 <label for="mail" class="box_text valid_Mail">Email:</label>
-                <input id="email" type="email" placeholder="Ejemplo:juam@aaa.com" class="valid_Mail valid_input_mail" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Ingrese su Mail">
+                <input id="email" type="email" placeholder="Ejemplo:juam@aaa.com" class="valid_Mail valid_input_mail" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Ingrese su Mail" onkeydown="inputCheckMail()">
               </div>
               <div class="box_msj">
                 <label for="msj" class="box_text valid_txt">Mensaje:</label>
-                <textarea id="msj" class="valid_txt valid_input_txt" name="mensaje" cols="25" rows="2" placeholder="Dejenos su mensaje..." data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Ingrese un minimo de 10 caracteres"></textarea>
+                <textarea id="msj" class="valid_txt valid_input_txt" name="mensaje" cols="25" rows="2" placeholder="Dejenos su mensaje..." data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Ingrese un minimo de 10 caracteres" onkeydown="inputCheckMsj()"></textarea>
               </div>
               <div class="box_btn">
                 <button type="button" class="btn" onclick="sendMsj()">Enviar</button>

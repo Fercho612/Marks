@@ -32,17 +32,17 @@
 
       <form class="form form-active m-1">
         <fieldset class="form_content">
-          <div class="form_input group">
-            <input required type="text" class="input" name="log_user">
+          <div class="form_input group group_user_log">
+            <input required id="log_user" type="text" class="input" name="log_user" onkeyup="checkUserLog()">
             <span class="highlight"></span>
             <span class="bar"></span>
-            <label>Usuario</label>
+            <label class="user_label">Usuario</label>
           </div>
-          <div class="form_input group">
-            <input required type="password" class="input" name="log_password">
+          <div class="form_input group group_user_pass">
+            <input required id="log_pass" type="password" class="input" name="log_password" onkeyup="checkPassLog()">
             <span class="highlight"></span>
             <span class="bar"></span>
-            <label>Contraseña</label>
+            <label class="pass_label">Contraseña</label>
           </div>
           <div class="form_check recordar">
             <input type="checkbox" name="recordar" id="recordar"><label for="recordar">Recordar cuenta</label>
@@ -57,7 +57,7 @@
         <fieldset class="form_content">
           <div class="input_par">
             <div class="form_input group group_user noselect">
-              <input required type="text" class="input" name="sign_user" id="sign_user">
+              <input required type="text" class="input" name="sign_user" id="sign_user" onkeyup="checkInputUser()">
               <span class="highlight"></span>
               <span class="bar"></span>
               <label>Usuario</label>
@@ -80,7 +80,7 @@
               </button>
             </div>
             <div class="form_input group group_email noselect">
-              <input required type="text" class="input" name="sign_user" id="sign_email">
+              <input required type="text" class="input" name="sign_user" id="sign_email" onkeyup="checkInputMail()">
               <span class="highlight"></span>
               <span class="bar"></span>
               <label>Email</label>
@@ -105,7 +105,7 @@
           </div>
           <div class="input_par">
             <div class="form_input group group_pass noselect">
-              <input required type="password" class="input" id="sign_pass">
+              <input required type="password" class="input" id="sign_pass" onkeyup="checkInputPass()">
               <span class="highlight"></span>
               <span class="bar"></span>
               <label>Contraseña</label>
@@ -128,7 +128,7 @@
               </button>
             </div>
             <div class="form_input group group_pass2 noselect">
-              <input required type="password" class="input" id="sign_confirPass">
+              <input required type="password" class="input" id="sign_confirPass" onkeyup="checkInputPassConfirm()">
               <span class="highlight"></span>
               <span class="bar"></span>
               <label id="confirmPass">Confirmar Contraseña</label>
@@ -153,8 +153,8 @@
             </div>
           </div>
           <div class="form_check">
-            <input type="checkbox" name="accept" id="accept"><label for="accept">Aceptar <a href="#">Terminos y condiciones</a> </label>
-            <div class=""></div>
+            <input type="checkbox" name="accept" id="accept" onchange="checkInputCheck()"><label for="accept">Aceptar <a href="#">Terminos y condiciones</a> </label>
+            <div class="checkInput"></div>
           </div>
           <div class="btn_send">
             <button type="button" onclick="signIn()">Registrarse</button>

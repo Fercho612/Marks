@@ -107,6 +107,12 @@ body{
 .input_par {
   display: flex;
 }
+.checkInput{
+  width: 100%;
+  height: 1px;
+  background: #f00;
+  display: none;
+}
 
 /* !Inputs */
 .group {
