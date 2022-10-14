@@ -33,21 +33,21 @@
   </header>
   <main id="main" class="noselect mb-5">
     <div class="main_content container-fluid row m-0 g-0 p-0  justify-content-center">
-      <div class="main_aside_resp row container-fluid m-0 p-0 g-0  justify-content-center align-items-center">
-        <div class="col-4">
-          <div class="dropdown justify-content-center">
+      <div class="main_aside_resp row container-fluid m-0 p-0 g-0 align-items-center">
+        <div class="col-5">
+          <div class="dropdown d-flex justify-content-center">
             <button type="button" class="p-2" data-bs-toggle="dropdown" aria-expanded="false">
               <span>Marcas <i class="fa-solid fa-plus"></i></span>
             </button>
             <ul class="dropdown-menu dropdown-menu-right">
-              <li><button id="Resp_Mark_CreateMark" class="dropdown-item">Crear marca</button></li>    
-              <li><button id="Resp_Mark_CreateTag" class="dropdown-item">Crear etiqueta</button></li>
-              <li><button id="Resp_Mark_ModTag" class="dropdown-item">Modificar etiqueta</button></li>
+              <li><button id="Resp_Mark_CreateMark" type="button" class="dropdown-item btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Crear marca</button></li>
+              <li><button id="Resp_Mark_CreateTag" class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Crear etiqueta</button></li>
+              <li><button id="Resp_Mark_ModTag" class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">Modificar etiqueta</button></li>
             </ul>
           </div>
         </div>
-        <div class="col-4">
-          <div class="dropdown justify-content-center">
+        <div class="col-5">
+          <div class="dropdown d-flex justify-content-center">
             <button type="button" class="p-2" data-bs-toggle="dropdown" aria-expanded="false">
               <span>Filtrar <i class="fa-solid fa-filter"></i></span>
             </button>
@@ -58,119 +58,36 @@
             </ul>
           </div>
         </div>
-        <div class="col-4">
-          <div class="dropdown d-flex justify-content-center">
-            <button type="button" class="p-2" data-bs-toggle="dropdown" aria-expanded="false">
-              <span>Ordenar <i class="fa-solid fa-sort"></i></span>
-            </button>
-            <ul class="dropdown-menu dropdown-menu-right">
-              <li><button id="Resp_Ord_AlfAsc" class="dropdown-item">Alfabetico<i class="fa-solid fa-arrow-up"></i></button></li>
-              <li><button id="Resp_Ord_AlfDesc" class="dropdown-item">Alfabetico<i class="fa-solid fa-arrow-down"></i></button></li>
-            </ul>
-          </div>
-        </div>
       </div>
       <aside class="main_aside col-md-2">
-        <h3>Marcas</h3>
-        <ul>
-          <li><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Crear marca</button></li>
-          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h3 class="modal-title fs-5" id="staticBackdropLabel">Crear Marca</h3>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <form class="container-fluid">
-                    <div class="row m-2 modal_group_inputs align-items-center">
-                      <label for="CreateTitle" class="col-md-3 m-0 h3">Titulo:</label> 
-                      <input id="CreateTitle" type="text" class="form-control modal_inputs col-md-9">
-                    </div>
-                    <div class="row m-2 modal_group_inputs align-items-center">
-                      <label for="CreateUrl" class="col-md-3 m-0 h3">Url:</label> 
-                      <input id="CreateUrl" type="text" class="form-control modal_inputs col-md-9">
-                    </div>
-                    <hr>
-                    <span class="h4">Opcional</span>
-                    <div class="row m-2 modal_group_inputs align-items-center">
-                      <label for="CreateTag" class="col-md-3 m-0 h5">Etiqueta:</label> 
-                      <select id="CreateTag" class="form-select modal_inputs col-md-9" aria-label="Default select example">
-                        <option selected>Seleccionar etiqueta</option>
-                        <option value="Empresa">Empresa</option>
-                        <option value="Diseño">Diseño</option>
-                        <option value="Desarrollo">Desarrollo</option>
-                      </select>
-                    </div>
-                    <div class="row m-2 modal_group_inputs align-items-center">
-                      <label for="CreateImg" class="col-md-4 m-0 h5">Imagen(URL):</label> 
-                      <input id="CreateImg" type="text" class="form-control modal_inputs col-md-7">
-                    </div>
-                    <div class="row m-2 modal_group_inputs align-items-start">
-                      <label for="CreateText" class="col-md-4 m-0 h5">Descripcion:</label> 
-                      <textarea id="CreateText"
-                      class="modal_inputs modal_inputs_descp col-md-8" cols="30" rows="10"></textarea>
-                    </div>
-                  </form>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                  <button type="button" class="btn btn-primary" onclick="createMark()">Guardar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <li><button class="btn btn-mark" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Crear etiqueta</button></li>
-          <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Crear Etiqueta</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  ...
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                  <button type="button" class="btn btn-primary">Guardar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <li><button class="btn btn-mark" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">Modificar Etiqueta</button></li>
-          <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h3 class="modal-title fs-5" id="staticBackdropLabel">Modoficar etiqueta</h3>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <form>
-                    <label></label>
-                  </form>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                  <button type="button" class="btn btn-primary">Guardar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </ul>
+        <div class="mb-5">
+          <h3>Marcas</h3>
+          <ul class="m-2">
+            <li><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Crear marca</button></li>
+            <li><button class="btn btn-mark" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Crear etiqueta</button></li>
+            <li><button class="btn btn-mark" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">Modificar Etiqueta</button></li>
+          </ul>
+        </div>   
         <h3>Filtrar:</h3>
         <ul class="radio_group">
-          <li><label for="fil_all">Todos:</label><input type="radio" name="filtro" id="fil_all" checked></li>
-          <li><label for="fil_eti">Favoritos:</label><input type="radio" name="filtro" id="fil_eti"></li>
-          <li><label for="fil_color">Etiqueta:</label><input type="radio" name="filtro" id="fil_color"></li>
-        </ul>
-        <h3>Ordenar por:</h3>
-        <ul class="radio_group">
-          <li> <label for="alfabetico_asc">Alfabetico<i class="fa-solid fa-arrow-up"></i></label> <input type="radio" name="orden" id="alfabetico_asc"></li>
-          <li> <label for="alfabetico_desc">Alfabetico<i class="fa-solid fa-arrow-down"></i></label> <input type="radio" name="orden" id="alfabetico_desc"></li>
+          <li><label for="fil_all" class="h5">Todos:</label><input type="radio" name="filtro" id="fil_all" onclick="filtrarMark()" checked></li>
+          <li><label for="fil_fav" class="h5">Favoritos:</label><input type="radio" name="filtro" id="fil_fav" onclick="filtrarMark()"></li>
+          <li class="row m-1 d-flex justify-content-between">
+            <label for="fil_tag" class="col-3 p-0 h5">Etiqueta:</label>
+            <select id="fil_tag" class="form-select selectTag col-7 fil_tag_aside p-0 justify-self-end" aria-label="Default select example" onchange="filtrarMark()">
+              <option selected value="allTag">Todas</option>
+            </select>
+          </li> 
         </ul>
       </aside>
+      <div class="modal fade modal-Create" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      </div>
+      <div class="modal fade modal-tag" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      </div>
+      <div class="modal fade modal-modtag" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      </div>
+      <div class="modal fade modal-ModMark" id="staticBackdropMod" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      </div>
       <section id="main_sec" class="col-md-9">
       </section>
     </div>
@@ -231,5 +148,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="../main.js"></script>
   <script src="UI_main.js"></script>
+  <script src="Modals.js"></script>
 </body>
 </html>
